@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ba241152.css",
-    "main.js": "/Portfolio/static/js/main.8679c855.js",
+    "main.css": "/Portfolio/static/css/main.99a65416.css",
+    "main.js": "/Portfolio/static/js/main.7c9f29bf.js",
     "static/js/453.b05d8aa5.chunk.js": "/Portfolio/static/js/453.b05d8aa5.chunk.js",
-    "static/media/image.png": "/Portfolio/static/media/image.e13dd4308f516910c137.png",
+    "static/media/fit-nest.png": "/Portfolio/static/media/fit-nest.e13dd4308f516910c137.png",
+    "static/media/rag.png": "/Portfolio/static/media/rag.bf82024bc41710fee70f.png",
+    "static/media/ai-agents.png": "/Portfolio/static/media/ai-agents.9a98124f64b146d2d6a6.png",
+    "static/media/crypto.png": "/Portfolio/static/media/crypto.0b9deb84794d1a6e9f6b.png",
+    "static/media/fine-tuning.png": "/Portfolio/static/media/fine-tuning.654a3c8eae72aca9d5fe.png",
     "index.html": "/Portfolio/index.html",
-    "main.ba241152.css.map": "/Portfolio/static/css/main.ba241152.css.map",
-    "main.8679c855.js.map": "/Portfolio/static/js/main.8679c855.js.map",
+    "main.99a65416.css.map": "/Portfolio/static/css/main.99a65416.css.map",
+    "main.7c9f29bf.js.map": "/Portfolio/static/js/main.7c9f29bf.js.map",
     "453.b05d8aa5.chunk.js.map": "/Portfolio/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba241152.css",
-    "static/js/main.8679c855.js"
+    "static/css/main.99a65416.css",
+    "static/js/main.7c9f29bf.js"
   ]
 }
