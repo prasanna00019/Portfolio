@@ -5,7 +5,7 @@ function Main() {
 
   return (
     <div className="container">
-      <ProfileCard avatarUrl="https://avatars.githubusercontent.com/u/159623027?v=4" />
+      <ProfileCard className='' avatarUrl="https://avatars.githubusercontent.com/u/159623027?v=4" />
       {/* <ProfileCard2  /> */}
       {/* <div className="about-section">
         <div className="image-wrapper">

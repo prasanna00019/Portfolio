@@ -1,7 +1,10 @@
 .dark-mode .about-section {
     background-color: rgba(0, 0, 0, 0.2);
 }
-
+.image-wrapper-img {
+//   margin-left: 20px;
+  margin: auto;
+}
 .about-section {
     display: flex;
     gap: 30px;
@@ -91,7 +94,10 @@
             margin: 0px;
             padding: 0px;
         }
-
+.image-wrapper-img {
+//   margin-left: 20px;
+  margin: auto;
+}
         body {
             width: 100%;
         }
@@ -116,6 +122,10 @@
         .container {
             display: initial;
         }
+        .image-wrapper-img {
+//   margin-left: 20px;
+  margin: auto;
+}
 
         .social_icons {
             display: none !important;
