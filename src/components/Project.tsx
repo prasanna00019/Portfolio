@@ -3,6 +3,7 @@ import crypto from '../assets/images/crypto.png';
 import finetuning from '../assets/images/fine-tuning.png';
 import rag from '../assets/images/rag.png';
 import aiAgents from '../assets/images/ai-agents.png';
+import moodmaps from '../assets/images/moodmaps.png'
 import '../assets/styles/Project.scss';
 // import ShinyText from './ShinyText/ShinyText';
 
@@ -53,7 +54,7 @@ function Project() {
                 <p> Fully anonymous platform where users can post confessions, send self-destructing secret messages, and experience complete privacy. Messages can only be viewed once and will disappear forever after being read or after 24 hours if unopened.</p>
             </div>
             <div className="project">
-                <a href="https://github.com/prasanna00019/HackGenesis-25" target="_blank" rel="noreferrer"><img src="https://media.licdn.com/dms/image/v2/D4D2DAQFMY50tOeE8PQ/profile-treasury-image-shrink_800_800/B4DZcLSTcTG0AY-/0/1748241051473?e=1753272000&v=beta&t=9UgXXBhOlJpoGGd2JBflcWBgLrkwQjGq3fC06A1qDNY" className="zoom" alt="thumbnail" width="100%"
+                <a href="https://github.com/prasanna00019/HackGenesis-25" target="_blank" rel="noreferrer"><img src={moodmaps} className="zoom" alt="thumbnail" width="100%"
                 height={"60%"}/></a>
                 <a href="https://github.com/prasanna00019/HackGenesis-25" target="_blank" rel="noreferrer"><h2> Mood Maps</h2></a>
                 <p>MoodMaps investigates the transformative impact of yoga, meditation, and spirituality — offering a pathway to inner calm, self-discovery, and overall well-being.</p>
