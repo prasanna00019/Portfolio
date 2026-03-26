@@ -6,10 +6,86 @@ import aiAgents from "../assets/images/ai-agents.png";
 import moodmaps from "../assets/images/moodmaps.png";
 import "../assets/styles/Project.scss";
 
-const featuredProjects = [
+interface ProjectItem {
+  title: string;
+  kind: string;
+  href: string;
+  image?: string;
+  placeholder?: string;
+  description: string;
+  tags: string[];
+}
+
+const aiProjects: ProjectItem[] = [
+  {
+    title: "IDE Memory MCP",
+    kind: "Cross-IDE memory layer",
+    href: "https://github.com/prasanna00019/MCP-ToolHub/tree/main/IDE-Memory-MCP",
+    placeholder: "Add project image",
+    description:
+      "A persistent memory layer for AI coding agents that keeps project context available across IDEs with section-based storage, smart warnings, and context-optimized reads.",
+    tags: ["MCP", "AI Agents", "Developer Tools"],
+  },
+  {
+    title: "PostgreSQL MCP",
+    kind: "Database intelligence server",
+    href: "https://github.com/prasanna00019/MCP-ToolHub/tree/main/PostgreSQL-MCP",
+    placeholder: "Add project image",
+    description:
+      "An MCP server that combines schema analysis, AI-assisted explanation, CRUD operations, transactions, monitoring, and diagram generation for PostgreSQL databases.",
+    tags: ["PostgreSQL", "MCP", "Automation"],
+  },
+  {
+    title: "ContentPilot",
+    kind: "Agentic content platform",
+    href: "https://github.com/prasanna00019/AI-Agents-Hub/tree/main/ContentGeneration",
+    placeholder: "Add project image",
+    description:
+      "A local-first multi-agent platform for planning, researching, generating, formatting, and reviewing social content with LangGraph, advanced RAG, and memory-aware channel workflows.",
+    tags: ["LangGraph", "RAG", "Agentic AI"],
+  },
+  {
+    title: "Video2Notes Agent",
+    kind: "Video intelligence workflow",
+    href: "https://github.com/prasanna00019/AI-Agents-Hub/tree/main/Video2Notes_Agent",
+    placeholder: "Add project image",
+    description:
+      "A privacy-friendly system that turns long videos, uploads, and playlist items into structured notes, searchable knowledge, optional study assets, and RAG-enabled follow-up chat.",
+    tags: ["Whisper", "RAG", "Notes"],
+  },
+  {
+    title: "AI Agents Hub",
+    kind: "Agent collection",
+    href: "https://github.com/prasanna00019/AI-Agents-Hub",
+    image: aiAgents,
+    description:
+      "A repository of agentic systems and experiments exploring tools, memory, orchestration, and practical reasoning workflows with LLM-based systems.",
+    tags: ["Agents", "Tools", "Memory"],
+  },
+  {
+    title: "RAG Playground",
+    kind: "Retrieval systems",
+    href: "https://github.com/prasanna00019/RAG-Playground",
+    image: rag,
+    description:
+      "A curated lab for retrieval-augmented generation patterns, from core foundations to routing and agentic reasoning experiments.",
+    tags: ["RAG", "Prompt Routing", "LlamaIndex"],
+  },
+  {
+    title: "Fine Tuning LLMs",
+    kind: "Model adaptation",
+    href: "https://github.com/prasanna00019/Fine-Tuning-LLMs",
+    image: finetuning,
+    description:
+      "Hands-on fine-tuning experiments across language models, beginning with GPT-2 and expanding toward broader adaptation workflows.",
+    tags: ["Fine-Tuning", "Transformers", "Experiments"],
+  },
+];
+
+const fullStackProjects: ProjectItem[] = [
   {
     title: "Full Stack Chat App",
-    category: "MERN Product",
+    kind: "MERN product",
     href: "https://github.com/prasanna00019/CHAT-APP-FULL-STACK",
     image:
       "https://raw.githubusercontent.com/prasanna00019/CHAT-APP-FULL-STACK/main/frontend/src/assets/Screenshot%202024-11-24%20193155.png",
@@ -19,7 +95,7 @@ const featuredProjects = [
   },
   {
     title: "Full Stack LeetCode Clone",
-    category: "Developer Platform",
+    kind: "Developer platform",
     href: "https://github.com/prasanna00019/LEETCODE-CLONE-FULL-STACK",
     image:
       "https://raw.githubusercontent.com/prasanna00019/LEETCODE-CLONE-FULL-STACK/main/frontend/src/assets/leetcode-ss-1.png",
@@ -27,36 +103,12 @@ const featuredProjects = [
       "A coding practice platform focused on interactive problem solving, performance tracking, and a familiar competitive programming flow.",
     tags: ["MERN", "Coding Platform", "UI/UX"],
   },
-  {
-    title: "AI Agents Hub",
-    category: "Agentic AI",
-    href: "https://github.com/prasanna00019/AI-Agents-Hub",
-    image: aiAgents,
-    description:
-      "A collection of agentic systems and experiments exploring tools, memory, reasoning, and practical task execution with LLM-based workflows.",
-    tags: ["Agents", "Tools", "Memory"],
-  },
-  {
-    title: "RAG Playground",
-    category: "Retrieval Systems",
-    href: "https://github.com/prasanna00019/RAG-Playground",
-    image: rag,
-    description:
-      "A curated lab for retrieval-augmented generation patterns, from core foundations to routing and agentic reasoning experiments.",
-    tags: ["RAG", "Prompt Routing", "LlamaIndex"],
-  },
-  {
-    title: "Fine Tuning LLMs",
-    category: "Model Adaptation",
-    href: "https://github.com/prasanna00019/Fine-Tuning-LLMs",
-    image: finetuning,
-    description:
-      "Hands-on fine-tuning experiments across language models, beginning with GPT-2 and expanding toward broader adaptation workflows.",
-    tags: ["Fine-Tuning", "Transformers", "Experiments"],
-  },
+];
+
+const cryptoProjects: ProjectItem[] = [
   {
     title: "Crypto Toolkit Scratch",
-    category: "Foundations",
+    kind: "Foundations from scratch",
     href: "https://github.com/prasanna00019/Crypto-Toolkit-Scratch",
     image: crypto,
     description:
@@ -65,10 +117,10 @@ const featuredProjects = [
   },
 ];
 
-const shippedProjects = [
+const hackathonProjects: ProjectItem[] = [
   {
     title: "OneSeen",
-    category: "Hackathon Build",
+    kind: "Hackathon build",
     href: "https://github.com/prasanna00019/OneSeen",
     image:
       "https://raw.githubusercontent.com/prasanna00019/OneSeen/master/frontend/src/assets/demo.png",
@@ -78,16 +130,19 @@ const shippedProjects = [
   },
   {
     title: "Mood Maps",
-    category: "Wellness Product",
+    kind: "Wellness product",
     href: "https://github.com/prasanna00019/HackGenesis-25",
     image: moodmaps,
     description:
       "A project exploring how yoga, meditation, and spirituality can support inner calm, self-discovery, and emotional wellbeing.",
     tags: ["Hackathon", "Wellness", "Storytelling"],
   },
+];
+
+const internshipProjects: ProjectItem[] = [
   {
     title: "Fit-Nest",
-    category: "Internship Product",
+    kind: "Internship product",
     href: "https://www.fit-nest.in/",
     image: k,
     description:
@@ -96,10 +151,26 @@ const shippedProjects = [
   },
 ];
 
+const researchProjects: ProjectItem[] = [
+  {
+    title: "Optimization Methods",
+    kind: "Engineering algorithms",
+    href: "https://github.com/prasanna00019/Optimization-Methods",
+    placeholder: "Add project image",
+    description:
+      "A collection of optimization algorithms implemented in Python for engineering applications, covering linear, nonlinear, constrained, gradient-based, and population-based methods.",
+    tags: ["Python", "Optimization", "Engineering"],
+  },
+];
+
 function Project() {
   const projectGroups = [
-    { label: "Featured builds", items: featuredProjects },
-    { label: "Hackathon and shipped work", items: shippedProjects },
+    { label: "AI Projects", items: aiProjects },
+    { label: "Full Stack Projects", items: fullStackProjects },
+    { label: "Crypto Project", items: cryptoProjects },
+    { label: "Hackathon Projects", items: hackathonProjects },
+    { label: "Internship Projects", items: internshipProjects },
+    { label: "Engineering & Research", items: researchProjects },
   ];
 
   return (
@@ -107,11 +178,12 @@ function Project() {
       <div className="section-heading">
         <span className="section-kicker">Projects</span>
         <h2 className="section-title">
-          A portfolio of systems, experiments, and shipped product work.
+          Categorized around the work I actually do most: backend, AI, and real systems.
         </h2>
         <p className="section-intro">
-          From backend-heavy platforms to agentic AI explorations, these are the
-          builds that best represent how I think and execute.
+          These projects are grouped by problem space so it&apos;s easier to scan the
+          AI work, full-stack builds, crypto foundations, hackathon output, and
+          internship delivery separately.
         </p>
       </div>
 
@@ -131,11 +203,17 @@ function Project() {
                   rel="noreferrer"
                 >
                   <div className="project-media">
-                    <img src={project.image} className="zoom" alt={project.title} />
+                    {project.image ? (
+                      <img src={project.image} className="zoom" alt={project.title} />
+                    ) : (
+                      <div className="project-placeholder">
+                        <span>{project.placeholder ?? "Add image"}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="project-body">
                     <div className="project-meta">
-                      <span className="project-category">{project.category}</span>
+                      <span className="project-category">{project.kind}</span>
                       <span className="project-link">Open</span>
                     </div>
                     <h3>{project.title}</h3>

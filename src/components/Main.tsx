@@ -18,12 +18,14 @@ function Main() {
           Neon editorial build
         </span>
         <h1 className="hero-title">
-          Backend systems,
-          <span> agentic AI, and interfaces that refuse to look ordinary.</span>
+          Backend architecture,
+          <span> MCP-native AI systems, and products built to go deep.</span>
         </h1>
         <p className="hero-description">
-          I build high-signal digital products with a backend-first mindset, then
-          wrap them in expressive UI that feels sharp, modern, and alive.
+          My strongest lane is backend engineering: system design, APIs, data flow,
+          and product logic. Alongside that, I&apos;m actively building in AI with
+          Agentic AI, RAG, MCP, LLMs, and SLMs, while going deeper into the
+          architecture of modern language models.
         </p>
 
         <div className="hero-actions">
@@ -53,16 +55,16 @@ function Main() {
 
         <div className="hero-signals">
           <article className="hero-signal-card">
-            <span>Build focus</span>
-            <strong>Scalable APIs, product logic, and platform thinking</strong>
+            <span>Primary lane</span>
+            <strong>Backend systems, APIs, databases, and system design thinking</strong>
           </article>
           <article className="hero-signal-card">
-            <span>AI layer</span>
-            <strong>RAG systems, fine-tuning workflows, and agent orchestration</strong>
+            <span>Current work</span>
+            <strong>Agentic AI, RAG pipelines, MCP tooling, LLM and SLM workflows</strong>
           </article>
           <article className="hero-signal-card">
-            <span>Design energy</span>
-            <strong>Editorial gradients, glass surfaces, and motion with intent</strong>
+            <span>Deep focus</span>
+            <strong>Exploring LLM architecture, orchestration patterns, and AI automation</strong>
           </article>
         </div>
       </div>
@@ -76,9 +78,9 @@ function Main() {
           <ProfileCard
             avatarUrl="https://avatars.githubusercontent.com/u/159623027?v=4"
             name="Prasanna H"
-            title="Backend Developer • AI Builder"
+            title="Backend Systems • AI Automation"
             handle="prasanna00019"
-            status="Available for bold builds"
+            status="Working on MCP, RAG, and agentic workflows"
             contactText="Contact"
             onContactClick={scrollToContact}
             behindGradient="radial-gradient(circle at 20% 20%, rgba(0, 247, 255, 0.95) 0%, rgba(0, 247, 255, 0) 42%), radial-gradient(circle at 80% 18%, rgba(255, 84, 143, 0.88) 0%, rgba(255, 84, 143, 0) 40%), radial-gradient(circle at 50% 100%, rgba(186, 255, 60, 0.82) 0%, rgba(186, 255, 60, 0) 35%), conic-gradient(from 180deg at 50% 50%, #ff5f6d 0deg, #ffc371 50deg, #00f7ff 135deg, #8d5bff 240deg, #ff5f6d 360deg)"

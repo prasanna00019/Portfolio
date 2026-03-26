@@ -3,6 +3,14 @@ import "../assets/styles/Timeline.scss";
 
 const experiences = [
   {
+    period: "Jan 1, 2026 - Present",
+    company: "Plusinfosys",
+    role: "Strategic / Research Intern",
+    summary:
+      "Working on AI automation with a research-oriented mindset, exploring practical ways to apply intelligent workflows to business and product processes.",
+    tags: ["AI Automation", "Research", "Strategy", "Workflow Design"],
+  },
+  {
     period: "May 2025 - Present",
     company: "Hausvalley.com",
     role: "Backend & AI Engineering Intern",
@@ -28,8 +36,8 @@ function Timeline() {
           <span className="section-kicker">Experience</span>
           <h2 className="section-title">A short timeline, built around real shipping work.</h2>
           <p className="section-intro">
-            My experience leans practical: backend systems, AI-oriented features,
-            product collaboration, and delivery in fast-moving environments.
+            My work experience sits at the intersection of backend engineering,
+            AI-driven problem solving, and product-oriented execution.
           </p>
         </div>
 

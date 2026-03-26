@@ -1,13 +1,13 @@
 :root {
   --bg-0: #050816;
   --bg-1: #090f24;
-  --surface: rgba(10, 16, 36, 0.72);
-  --surface-strong: rgba(12, 19, 41, 0.94);
+  --surface: rgba(14, 22, 48, 0.78);
+  --surface-strong: rgba(18, 28, 58, 0.96);
   --line: rgba(255, 255, 255, 0.12);
   --line-strong: rgba(255, 255, 255, 0.2);
   --text-primary: #f4f7ff;
-  --text-secondary: rgba(232, 238, 255, 0.72);
-  --text-tertiary: rgba(232, 238, 255, 0.56);
+  --text-secondary: rgba(240, 244, 255, 0.84);
+  --text-tertiary: rgba(236, 241, 255, 0.7);
   --cyan: #00f7ff;
   --pink: #ff4f9b;
   --lime: #c8ff57;
@@ -25,22 +25,23 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(0, 247, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 85% 15%, rgba(255, 79, 155, 0.16), transparent 28%),
-    radial-gradient(circle at 50% 100%, rgba(200, 255, 87, 0.12), transparent 30%),
+    radial-gradient(circle at top left, rgba(0, 247, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(255, 79, 155, 0.2), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(200, 255, 87, 0.14), transparent 30%),
     var(--bg-0);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body::selection {
+::selection {
   background: rgba(0, 247, 255, 0.28);
 }
 
@@ -133,7 +134,7 @@ button {
   border-radius: 32px;
   border: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
     var(--surface);
   backdrop-filter: blur(24px);
   box-shadow: var(--shadow-card), var(--shadow-glow);
@@ -208,10 +209,11 @@ button {
 
 .button-primary {
   border: 1px solid transparent;
-  background: linear-gradient(135deg, var(--cyan), var(--pink) 65%, var(--orange));
-  color: #041019;
+  background: linear-gradient(135deg, #04d8ff, #ff4f9b 62%, #ff8c3a);
+  color: #f8fbff;
   font-weight: 700;
   box-shadow: 0 18px 42px rgba(255, 79, 155, 0.24);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
 }
 
 .button-secondary {

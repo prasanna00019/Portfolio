@@ -7,23 +7,26 @@ import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 
 const labelsFirst = [
-    "React",
-    "Next JS",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
+    "System Design",
     "Node.js",
     "Express.js",
     "AdonisJS",
+    "PostgreSQL",
     "MongoDB",
     "SQL",
-    "PostgreSQL",
+    "REST APIs",
+    "Authentication",
+    "Performance",
+    "Scalable Architecture",
     "Postman"
 ];
 
 const labelsThird = [
+    "MCP",
+    "RAG",
     "LLMs",
+    "SLMs",
+    "Agentic AI",
     "NLP",
     "Hugging Face",
     "Langchain",
@@ -34,48 +37,48 @@ const labelsThird = [
 ];
 
 const labelsSystems = [
-    "System Design",
-    "REST APIs",
-    "Authentication",
-    "Developer Experience",
-    "Performance",
-    "Deployment",
-    "GitHub Actions",
-    "MCP",
+    "LLM Architecture",
+    "Inference",
+    "Prompt Design",
+    "Evaluation",
+    "AI Automation",
+    "Python",
+    "FastAPI",
+    "Research",
 ];
 
 function Expertise() {
     const expertiseAreas = [
         {
             icon: faReact,
-            eyebrow: "Full stack",
-            title: "Product engineering with a backend-first center of gravity",
+            eyebrow: "Backend focus",
+            title: "Backend systems with strong architecture and database instincts",
             description:
-                "I build end-to-end applications with clean backend contracts, practical frontend architecture, and enough polish to make the experience feel premium.",
+                "I work mainly on backend engineering: designing APIs, structuring services, modeling data, and building systems that stay clean as product complexity grows.",
             labels: labelsFirst,
         },
         {
             icon: faPython,
             eyebrow: "AI systems",
-            title: "LLM features that move beyond demos into usable workflows",
+            title: "MCP, RAG, LLM, SLM, and agentic workflows built for real use",
             description:
-                "My AI work focuses on retrieval, orchestration, fine-tuning, and agentic systems that can plug into real products rather than living as isolated experiments.",
+                "My AI work centers on practical intelligence layers: MCP tooling, retrieval pipelines, agent orchestration, fine-tuning workflows, and systems that fit into real products.",
             labels: labelsThird,
         },
         {
             icon: faBolt,
-            eyebrow: "Execution",
-            title: "Shipping mindset with strong system and product instincts",
+            eyebrow: "Current exploration",
+            title: "Going deeper into AI automation and the architecture of language models",
             description:
-                "I like building fast, but not loosely. That means scalable APIs, sensible trade-offs, observability, and interfaces that still feel intentional under pressure.",
+                "Right now I&apos;m actively working on AI automation while studying LLM architecture more deeply, so I can understand not just how to use these systems, but how they are structured underneath.",
             labels: labelsSystems,
         },
     ];
 
     const principles = [
         "Strong backend contracts before interface complexity",
-        "AI features designed for actual user flow",
-        "Visual systems that feel distinctive, not templated",
+        "AI systems designed for usable product workflows",
+        "Continuous depth in model architecture and agentic patterns",
     ];
 
     return (
@@ -84,8 +87,8 @@ function Expertise() {
             <span className="section-kicker">What I bring</span>
             <h2 className="section-title">Three lanes that define how I build.</h2>
             <p className="section-intro">
-                The sweet spot is combining product thinking, backend depth, and
-                AI-native experimentation into interfaces that feel current.
+                The core combination is backend depth, AI-native implementation, and
+                a strong bias toward systems that are useful, explainable, and scalable.
             </p>
         </div>
 
