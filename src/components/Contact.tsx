@@ -72,12 +72,12 @@ function Contact() {
                   <span className="contact-icon">
                     <Icon size={18} />
                   </span>
-                  <div>
+                  <div className="contact-text">
                     <span className="contact-label">{link.label}</span>
                     <span className="contact-value">{link.value}</span>
                   </div>
                 </div>
-                <MoveUpRight size={18} />
+                <MoveUpRight className="contact-arrow" size={18} />
               </a>
             );
           })}
