@@ -16,19 +16,18 @@
   padding: 1.2rem;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(135deg, rgba(0, 247, 255, 0.08), rgba(255, 79, 155, 0.08)),
-    rgba(255, 255, 255, 0.04);
+  background: var(--contact-accent-bg);
 }
 
 .contact-panel span {
-  color: var(--text-tertiary);
+  color: var(--cyan);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.8rem;
 }
 
 .contact-panel strong {
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
@@ -45,9 +44,7 @@
   padding: 1rem 1.1rem;
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
-    rgba(9, 14, 33, 0.72);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)), var(--surface-panel);
   transition: transform 180ms ease, border-color 180ms ease;
 }
 
@@ -69,9 +66,7 @@
   width: 2.7rem;
   height: 2.7rem;
   border-radius: 16px;
-  background:
-    linear-gradient(135deg, rgba(0, 247, 255, 0.16), rgba(255, 79, 155, 0.16)),
-    rgba(255, 255, 255, 0.06);
+  background: var(--contact-icon-bg);
 }
 
 .contact-label,
@@ -82,10 +77,11 @@
 .contact-label {
   margin-bottom: 0.2rem;
   font-weight: 700;
+  color: var(--text-primary);
 }
 
 .contact-value {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-size: 0.92rem;
 }
 

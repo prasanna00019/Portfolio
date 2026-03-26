@@ -23,7 +23,7 @@
   top: 0.5rem;
   bottom: 0.5rem;
   width: 1px;
-  background: linear-gradient(180deg, rgba(0, 247, 255, 0.4), rgba(255, 79, 155, 0.24));
+  background: var(--timeline-line-bg);
 }
 
 .timeline-item {
@@ -39,9 +39,8 @@
   height: 28px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background:
-    radial-gradient(circle, rgba(255, 255, 255, 0.88), rgba(0, 247, 255, 0.4) 42%, rgba(0, 247, 255, 0.08) 70%);
-  box-shadow: 0 0 28px rgba(0, 247, 255, 0.25);
+  background: var(--timeline-marker-bg);
+  box-shadow: var(--timeline-marker-glow);
 }
 
 .timeline-content {
@@ -50,13 +49,11 @@
   padding: 1.15rem 1.2rem;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
-    rgba(9, 14, 33, 0.7);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)), var(--surface-panel);
 }
 
 .timeline-period {
-  color: var(--lime);
+  color: var(--timeline-period-color);
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.13em;
@@ -70,6 +67,7 @@
 
 .timeline-content h3 {
   font-size: 1.4rem;
+  color: var(--text-primary);
 }
 
 .timeline-content h4 {

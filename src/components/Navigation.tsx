@@ -13,6 +13,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { THEME_OPTIONS, type ThemeName } from "../theme";
 
 const drawerWidth = 240;
 const navItems = [
@@ -23,7 +24,12 @@ const navItems = [
   ["Contact", "contact"],
 ] as const;
 
-function Navigation() {
+interface NavigationProps {
+  onThemeChange: (theme: ThemeName) => void;
+  theme: ThemeName;
+}
+
+function Navigation({ onThemeChange, theme }: NavigationProps) {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
@@ -58,7 +64,7 @@ function Navigation() {
         <span className="brand-chip">PH</span>
         <div>
           <p>Prasanna H</p>
-          <span>Neon editorial portfolio</span>
+          <span>Backend + AI portfolio</span>
         </div>
       </div>
       <Divider />
@@ -74,6 +80,20 @@ function Navigation() {
           </ListItem>
         ))}
       </List>
+      <div className="theme-switcher theme-switcher-mobile" role="tablist" aria-label="Theme palette">
+        {THEME_OPTIONS.map((option) => (
+          <button
+            key={option.value}
+            className={`theme-option${theme === option.value ? " is-active" : ""}`}
+            onClick={() => onThemeChange(option.value)}
+            role="tab"
+            aria-selected={theme === option.value}
+            type="button"
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
       <Button
         className="nav-cta mobile-nav-cta"
         endIcon={<ArrowOutwardIcon />}
@@ -102,7 +122,6 @@ function Navigation() {
             <span className="brand-chip">PH</span>
             <span className="brand-copy">
               <strong>Prasanna H</strong>
-              <small>Backend x AI x Interfaces</small>
             </span>
           </button>
           <Box className="desktop-nav" sx={{ display: { xs: "none", md: "flex" } }}>
@@ -116,6 +135,20 @@ function Navigation() {
               </Button>
             ))}
           </Box>
+          <div className="theme-switcher" role="tablist" aria-label="Theme palette">
+            {THEME_OPTIONS.map((option) => (
+              <button
+                key={option.value}
+                className={`theme-option${theme === option.value ? " is-active" : ""}`}
+                onClick={() => onThemeChange(option.value)}
+                role="tab"
+                aria-selected={theme === option.value}
+                type="button"
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
           <Button
             className="nav-cta desktop-nav-cta"
             endIcon={<ArrowOutwardIcon />}
@@ -149,9 +182,8 @@ function Navigation() {
               boxSizing: "border-box",
               width: drawerWidth,
               padding: "1.25rem",
-              borderLeft: "1px solid rgba(255,255,255,0.12)",
-              background:
-                "linear-gradient(180deg, rgba(7,10,28,0.96) 0%, rgba(11,17,36,0.92) 100%)",
+              borderLeft: "1px solid var(--drawer-border)",
+              background: "var(--drawer-surface)",
               backdropFilter: "blur(18px)",
             },
           }}

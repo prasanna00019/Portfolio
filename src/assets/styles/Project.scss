@@ -13,8 +13,8 @@
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text-secondary);
+  background: var(--project-group-chip-bg);
+  color: var(--text-primary);
   text-transform: uppercase;
   font-size: 0.82rem;
   letter-spacing: 0.12em;
@@ -32,9 +32,7 @@
   overflow: hidden;
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
-    rgba(9, 14, 33, 0.72);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)), var(--surface-panel);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
@@ -48,9 +46,7 @@
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(0, 247, 255, 0.12), rgba(255, 79, 155, 0.12)),
-    rgba(255, 255, 255, 0.04);
+  background: var(--project-media-bg);
 }
 
 .zoom {
@@ -71,10 +67,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background:
-    radial-gradient(circle at top left, rgba(0, 247, 255, 0.2), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(255, 79, 155, 0.22), transparent 35%),
-    rgba(255, 255, 255, 0.03);
+  background: var(--project-placeholder-bg);
 }
 
 .project-placeholder span {
@@ -102,7 +95,7 @@
 
 .project-category,
 .project-link {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -116,6 +109,7 @@
 .project h3 {
   font-size: 1.28rem;
   line-height: 1.2;
+  color: var(--text-primary);
 }
 
 .project p {

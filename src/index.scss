@@ -1,20 +1,180 @@
-:root {
+:root,
+:root[data-theme="neon"] {
+  --font-ui: "Space Grotesk", sans-serif;
+  --font-copy: "Manrope", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --accent-1-rgb: 105 247 255;
+  --accent-2-rgb: 255 114 183;
+  --accent-3-rgb: 211 255 114;
+  --accent-4-rgb: 143 140 255;
+  --accent-5-rgb: 255 177 91;
   --bg-0: #050816;
   --bg-1: #090f24;
-  --surface: rgba(14, 22, 48, 0.78);
-  --surface-strong: rgba(18, 28, 58, 0.96);
+  --surface: rgba(15, 24, 52, 0.8);
+  --surface-strong: rgba(20, 31, 66, 0.96);
+  --surface-panel: rgba(9, 14, 33, 0.72);
+  --surface-panel-alt: rgba(8, 14, 34, 0.72);
+  --surface-soft: rgba(255, 255, 255, 0.04);
+  --surface-soft-strong: rgba(255, 255, 255, 0.08);
   --line: rgba(255, 255, 255, 0.12);
   --line-strong: rgba(255, 255, 255, 0.2);
-  --text-primary: #f4f7ff;
-  --text-secondary: rgba(240, 244, 255, 0.84);
-  --text-tertiary: rgba(236, 241, 255, 0.7);
-  --cyan: #00f7ff;
-  --pink: #ff4f9b;
-  --lime: #c8ff57;
-  --orange: #ff9a3d;
-  --violet: #8c63ff;
+  --text-primary: #f8fbff;
+  --text-secondary: rgba(242, 247, 255, 0.92);
+  --text-tertiary: rgba(226, 236, 255, 0.8);
+  --cyan: rgb(var(--accent-1-rgb));
+  --pink: rgb(var(--accent-2-rgb));
+  --lime: rgb(var(--accent-3-rgb));
+  --orange: rgb(var(--accent-5-rgb));
+  --violet: rgb(var(--accent-4-rgb));
+  --selection-bg: rgb(var(--accent-1-rgb) / 0.28);
+  --body-glow-1: radial-gradient(circle at top left, rgb(var(--accent-1-rgb) / 0.22), transparent 28%);
+  --body-glow-2: radial-gradient(circle at 85% 15%, rgb(var(--accent-2-rgb) / 0.22), transparent 28%);
+  --body-glow-3: radial-gradient(circle at 50% 100%, rgb(var(--accent-3-rgb) / 0.14), transparent 30%);
+  --orb-one-bg: rgb(var(--accent-1-rgb) / 0.18);
+  --orb-two-bg: rgb(var(--accent-2-rgb) / 0.16);
+  --orb-three-bg: rgb(var(--accent-3-rgb) / 0.14);
+  --main-container-bg: linear-gradient(180deg, rgba(5, 8, 22, 0.88), rgba(5, 8, 22, 0.98));
+  --section-shell-before:
+    radial-gradient(circle at 0% 0%, rgb(var(--accent-1-rgb) / 0.22), transparent 26%),
+    radial-gradient(circle at 100% 0%, rgb(var(--accent-2-rgb) / 0.18), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgb(var(--accent-4-rgb) / 0.14), transparent 22%);
+  --section-kicker-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.12), rgb(var(--accent-2-rgb) / 0.12));
+  --hero-title-gradient: linear-gradient(135deg, var(--cyan), #ffffff 36%, var(--pink), var(--violet));
+  --button-primary-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb)) 0%, rgb(var(--accent-4-rgb)) 48%, rgb(var(--accent-2-rgb)) 100%);
+  --button-primary-shadow: 0 18px 42px rgb(var(--accent-4-rgb) / 0.24);
+  --brand-chip-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.28), rgb(var(--accent-2-rgb) / 0.16)),
+    rgba(255, 255, 255, 0.06);
+  --nav-cta-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.18), rgb(var(--accent-4-rgb) / 0.18), rgb(var(--accent-2-rgb) / 0.18));
+  --drawer-surface: linear-gradient(180deg, rgba(7, 10, 28, 0.96) 0%, rgba(11, 17, 36, 0.92) 100%);
+  --drawer-border: rgba(255, 255, 255, 0.12);
+  --project-group-chip-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.12), rgb(var(--accent-4-rgb) / 0.12));
+  --project-media-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.12), rgb(var(--accent-2-rgb) / 0.12)),
+    var(--surface-soft);
+  --project-placeholder-bg:
+    radial-gradient(circle at top left, rgb(var(--accent-1-rgb) / 0.2), transparent 35%),
+    radial-gradient(circle at bottom right, rgb(var(--accent-2-rgb) / 0.22), transparent 35%),
+    rgba(255, 255, 255, 0.03);
+  --contact-accent-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.08), rgb(var(--accent-2-rgb) / 0.08)),
+    var(--surface-soft);
+  --contact-icon-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.16), rgb(var(--accent-2-rgb) / 0.16)),
+    rgba(255, 255, 255, 0.06);
+  --timeline-line-bg: linear-gradient(180deg, rgb(var(--accent-1-rgb) / 0.4), rgb(var(--accent-2-rgb) / 0.24));
+  --timeline-marker-bg: radial-gradient(circle, rgba(255, 255, 255, 0.88), rgb(var(--accent-1-rgb) / 0.4) 42%, rgb(var(--accent-1-rgb) / 0.08) 70%);
+  --timeline-marker-glow: 0 0 28px rgb(var(--accent-1-rgb) / 0.25);
+  --timeline-period-color: #ffe58f;
+  --theme-switcher-bg: rgba(255, 255, 255, 0.05);
+  --theme-switcher-border: rgba(255, 255, 255, 0.08);
+  --theme-switcher-active-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.24), rgb(var(--accent-2-rgb) / 0.18));
+  --theme-switcher-active-shadow: 0 12px 24px rgb(var(--accent-1-rgb) / 0.12);
+  --profile-card-behind-gradient:
+    radial-gradient(circle at 20% 20%, rgb(var(--accent-1-rgb) / 0.95) 0%, rgb(var(--accent-1-rgb) / 0) 42%),
+    radial-gradient(circle at 80% 18%, rgb(var(--accent-2-rgb) / 0.88) 0%, rgb(var(--accent-2-rgb) / 0) 40%),
+    radial-gradient(circle at 50% 100%, rgb(var(--accent-3-rgb) / 0.82) 0%, rgb(var(--accent-3-rgb) / 0) 35%),
+    conic-gradient(from 180deg at 50% 50%, #ff5f6d 0deg, #ffc371 50deg, #00f7ff 135deg, #8d5bff 240deg, #ff5f6d 360deg);
+  --profile-card-inner-gradient: linear-gradient(180deg, rgba(9, 16, 37, 0.22) 0%, rgba(5, 9, 24, 0.92) 100%);
+  --profile-card-shell-gradient:
+    radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%),
+    radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%),
+    radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%),
+    conic-gradient(from 124deg at 50% 50%, #c137ffff 0%, #07c6ffff 40%, #07c6ffff 60%, #c137ffff 100%);
+  --profile-card-base: rgba(0, 0, 0, 0.9);
+  --profile-card-user-bg: rgba(17, 26, 57, 0.68);
+  --profile-card-cta-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.24), rgb(var(--accent-2-rgb) / 0.2));
+  --profile-card-glare: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.8) 90%);
+  --profile-card-heading: #f8fbff;
+  --profile-card-subheading: rgba(235, 243, 255, 0.94);
   --shadow-card: 0 30px 90px rgba(0, 0, 0, 0.35);
-  --shadow-glow: 0 0 80px rgba(0, 247, 255, 0.14);
+  --shadow-glow: 0 0 80px rgb(var(--accent-1-rgb) / 0.16);
+  --sunpillar-1: hsl(2, 100%, 73%);
+  --sunpillar-2: hsl(53, 100%, 69%);
+  --sunpillar-3: hsl(93, 100%, 69%);
+  --sunpillar-4: hsl(176, 100%, 76%);
+  --sunpillar-5: hsl(228, 100%, 74%);
+  --sunpillar-6: hsl(283, 100%, 73%);
+}
+
+:root[data-theme="ember"] {
+  --accent-1-rgb: 255 184 106;
+  --accent-2-rgb: 255 124 102;
+  --accent-3-rgb: 255 227 136;
+  --accent-4-rgb: 124 247 229;
+  --accent-5-rgb: 255 203 140;
+  --bg-0: #100914;
+  --bg-1: #1a101d;
+  --surface: rgba(36, 23, 32, 0.82);
+  --surface-strong: rgba(47, 28, 37, 0.96);
+  --surface-panel: rgba(30, 20, 26, 0.76);
+  --surface-panel-alt: rgba(34, 21, 29, 0.78);
+  --text-secondary: rgba(255, 244, 238, 0.9);
+  --text-tertiary: rgba(255, 228, 217, 0.78);
+  --selection-bg: rgb(var(--accent-2-rgb) / 0.28);
+  --body-glow-1: radial-gradient(circle at top left, rgb(var(--accent-1-rgb) / 0.2), transparent 30%);
+  --body-glow-2: radial-gradient(circle at 85% 15%, rgb(var(--accent-2-rgb) / 0.18), transparent 30%);
+  --body-glow-3: radial-gradient(circle at 50% 100%, rgb(var(--accent-4-rgb) / 0.12), transparent 28%);
+  --orb-one-bg: rgb(var(--accent-1-rgb) / 0.18);
+  --orb-two-bg: rgb(var(--accent-2-rgb) / 0.14);
+  --orb-three-bg: rgb(var(--accent-4-rgb) / 0.14);
+  --main-container-bg: linear-gradient(180deg, rgba(16, 9, 20, 0.9), rgba(12, 8, 14, 0.98));
+  --section-shell-before:
+    radial-gradient(circle at 0% 0%, rgb(var(--accent-1-rgb) / 0.18), transparent 28%),
+    radial-gradient(circle at 100% 0%, rgb(var(--accent-2-rgb) / 0.16), transparent 26%),
+    radial-gradient(circle at 50% 100%, rgb(var(--accent-4-rgb) / 0.12), transparent 24%);
+  --hero-title-gradient: linear-gradient(135deg, #ffd8ab, #fff7ee 34%, #ff9e8c 68%, #7cf7e5 100%);
+  --button-primary-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb)) 0%, rgb(var(--accent-2-rgb)) 52%, rgb(var(--accent-4-rgb)) 100%);
+  --button-primary-shadow: 0 18px 42px rgb(var(--accent-2-rgb) / 0.24);
+  --brand-chip-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.28), rgb(var(--accent-2-rgb) / 0.18)),
+    rgba(255, 255, 255, 0.06);
+  --nav-cta-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.2), rgb(var(--accent-2-rgb) / 0.18), rgb(var(--accent-4-rgb) / 0.18));
+  --drawer-surface: linear-gradient(180deg, rgba(24, 12, 20, 0.96) 0%, rgba(19, 10, 18, 0.92) 100%);
+  --project-group-chip-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.13), rgb(var(--accent-4-rgb) / 0.1));
+  --project-media-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.14), rgb(var(--accent-2-rgb) / 0.12)),
+    var(--surface-soft);
+  --project-placeholder-bg:
+    radial-gradient(circle at top left, rgb(var(--accent-1-rgb) / 0.22), transparent 35%),
+    radial-gradient(circle at bottom right, rgb(var(--accent-4-rgb) / 0.18), transparent 35%),
+    rgba(255, 255, 255, 0.03);
+  --contact-accent-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.1), rgb(var(--accent-2-rgb) / 0.08)),
+    var(--surface-soft);
+  --contact-icon-bg:
+    linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.18), rgb(var(--accent-4-rgb) / 0.16)),
+    rgba(255, 255, 255, 0.06);
+  --timeline-line-bg: linear-gradient(180deg, rgb(var(--accent-1-rgb) / 0.42), rgb(var(--accent-4-rgb) / 0.22));
+  --timeline-marker-bg: radial-gradient(circle, rgba(255, 247, 240, 0.9), rgb(var(--accent-1-rgb) / 0.45) 42%, rgb(var(--accent-4-rgb) / 0.1) 70%);
+  --timeline-marker-glow: 0 0 28px rgb(var(--accent-1-rgb) / 0.24);
+  --timeline-period-color: #ffdcb2;
+  --theme-switcher-active-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.24), rgb(var(--accent-4-rgb) / 0.18));
+  --theme-switcher-active-shadow: 0 12px 24px rgb(var(--accent-1-rgb) / 0.12);
+  --profile-card-behind-gradient:
+    radial-gradient(circle at 18% 18%, rgb(var(--accent-1-rgb) / 0.92) 0%, rgb(var(--accent-1-rgb) / 0) 42%),
+    radial-gradient(circle at 82% 22%, rgb(var(--accent-2-rgb) / 0.82) 0%, rgb(var(--accent-2-rgb) / 0) 42%),
+    radial-gradient(circle at 56% 100%, rgb(var(--accent-4-rgb) / 0.72) 0%, rgb(var(--accent-4-rgb) / 0) 38%),
+    conic-gradient(from 180deg at 50% 50%, #ff9f70 0deg, #ffe388 70deg, #7cf7e5 210deg, #ff7c66 320deg, #ff9f70 360deg);
+  --profile-card-inner-gradient: linear-gradient(180deg, rgba(46, 18, 18, 0.24) 0%, rgba(16, 8, 14, 0.94) 100%);
+  --profile-card-shell-gradient:
+    radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(24, 100%, 84%, var(--card-opacity)) 4%, hsla(20, 100%, 74%, calc(var(--card-opacity) * 0.75)) 12%, hsla(170, 80%, 70%, calc(var(--card-opacity) * 0.42)) 50%, hsla(170, 0%, 60%, 0) 100%),
+    radial-gradient(38% 56% at 58% 18%, rgb(var(--accent-1-rgb) / 0.78) 0%, rgba(35, 8, 32, 0) 100%),
+    radial-gradient(100% 100% at 50% 50%, rgb(var(--accent-4-rgb) / 0.95) 1%, rgba(35, 8, 32, 0) 78%),
+    conic-gradient(from 124deg at 50% 50%, #ff7c66 0%, #ffcf7a 34%, #7cf7e5 62%, #ffb86a 100%);
+  --profile-card-base: rgba(11, 5, 10, 0.92);
+  --profile-card-user-bg: rgba(52, 24, 31, 0.64);
+  --profile-card-cta-bg: linear-gradient(135deg, rgb(var(--accent-1-rgb) / 0.26), rgb(var(--accent-4-rgb) / 0.18));
+  --profile-card-glare: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(24, 100%, 84%, 0.9) 12%, hsla(168, 40%, 34%, 0.72) 90%);
+  --profile-card-heading: #fff6ef;
+  --profile-card-subheading: rgba(255, 232, 220, 0.94);
+  --shadow-glow: 0 0 80px rgb(var(--accent-1-rgb) / 0.14);
+  --sunpillar-1: hsl(12, 100%, 70%);
+  --sunpillar-2: hsl(34, 100%, 70%);
+  --sunpillar-3: hsl(46, 100%, 73%);
+  --sunpillar-4: hsl(168, 85%, 73%);
+  --sunpillar-5: hsl(190, 74%, 70%);
+  --sunpillar-6: hsl(352, 92%, 76%);
 }
 
 *,
@@ -30,19 +190,15 @@ html {
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(0, 247, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 85% 15%, rgba(255, 79, 155, 0.2), transparent 28%),
-    radial-gradient(circle at 50% 100%, rgba(200, 255, 87, 0.14), transparent 30%),
-    var(--bg-0);
+  font-family: var(--font-ui);
+  background: var(--body-glow-1), var(--body-glow-2), var(--body-glow-3), var(--bg-0);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: rgba(0, 247, 255, 0.28);
+  background: var(--selection-bg);
 }
 
 a {
@@ -62,7 +218,7 @@ button {
 .main-container {
   position: relative;
   overflow-x: clip;
-  background: linear-gradient(180deg, rgba(5, 8, 22, 0.88), rgba(5, 8, 22, 0.98));
+  background: var(--main-container-bg);
 }
 
 .ambient-orb {
@@ -79,7 +235,7 @@ button {
   left: -10%;
   width: 24rem;
   height: 24rem;
-  background: rgba(0, 247, 255, 0.18);
+  background: var(--orb-one-bg);
 }
 
 .ambient-orb-two {
@@ -87,7 +243,7 @@ button {
   right: -6%;
   width: 22rem;
   height: 22rem;
-  background: rgba(255, 79, 155, 0.16);
+  background: var(--orb-two-bg);
 }
 
 .ambient-orb-three {
@@ -95,7 +251,7 @@ button {
   left: 35%;
   width: 18rem;
   height: 18rem;
-  background: rgba(200, 255, 87, 0.14);
+  background: var(--orb-three-bg);
 }
 
 .page-grid {
@@ -134,7 +290,7 @@ button {
   border-radius: 32px;
   border: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05)),
     var(--surface);
   backdrop-filter: blur(24px);
   box-shadow: var(--shadow-card), var(--shadow-glow);
@@ -146,10 +302,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(0, 247, 255, 0.18), transparent 26%),
-    radial-gradient(circle at 100% 0%, rgba(255, 79, 155, 0.14), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(200, 255, 87, 0.12), transparent 22%);
+  background: var(--section-shell-before);
   pointer-events: none;
   z-index: -1;
 }
@@ -168,8 +321,8 @@ button {
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text-primary);
+  background: var(--section-kicker-bg);
+  color: #f8fbff;
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -177,18 +330,31 @@ button {
 
 .section-title {
   margin: 0;
-  font-family: "Syne", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.8rem);
   line-height: 0.96;
   letter-spacing: -0.04em;
+  color: var(--text-primary);
 }
 
 .section-intro {
   max-width: 46rem;
   margin: 0;
   color: var(--text-secondary);
+  font-family: var(--font-copy);
   font-size: 1.02rem;
   line-height: 1.7;
+}
+
+.hero-description,
+.skill p,
+.project p,
+.timeline-content p,
+.contact-panel strong,
+.contact-value,
+.footer-copy p {
+  font-family: var(--font-copy);
+  letter-spacing: -0.01em;
 }
 
 .button-primary,
@@ -209,16 +375,16 @@ button {
 
 .button-primary {
   border: 1px solid transparent;
-  background: linear-gradient(135deg, #04d8ff, #ff4f9b 62%, #ff8c3a);
+  background: var(--button-primary-bg);
   color: #f8fbff;
   font-weight: 700;
-  box-shadow: 0 18px 42px rgba(255, 79, 155, 0.24);
+  box-shadow: var(--button-primary-shadow);
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
 }
 
 .button-secondary {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text-primary);
 }
 
@@ -248,7 +414,7 @@ button {
   margin: 0 auto;
   padding: 0.85rem 0;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   gap: 1rem;
 }
@@ -272,9 +438,7 @@ button {
   height: 2.5rem;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background:
-    linear-gradient(135deg, rgba(0, 247, 255, 0.28), rgba(255, 79, 155, 0.16)),
-    rgba(255, 255, 255, 0.06);
+  background: var(--brand-chip-bg);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
   font-weight: 700;
 }
@@ -290,7 +454,7 @@ button {
 }
 
 .brand-copy small {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -303,7 +467,7 @@ button {
 }
 
 .nav-link {
-  color: var(--text-secondary) !important;
+  color: var(--text-primary) !important;
   padding: 0.55rem 0.9rem !important;
   border-radius: 999px !important;
   text-transform: none !important;
@@ -319,11 +483,55 @@ button {
   padding: 0.75rem 1rem !important;
   border-radius: 999px !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  background:
-    linear-gradient(135deg, rgba(0, 247, 255, 0.18), rgba(255, 79, 155, 0.18)) !important;
+  background: var(--nav-cta-bg) !important;
   color: var(--text-primary) !important;
   text-transform: none !important;
   font-weight: 700 !important;
+}
+
+.theme-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--theme-switcher-border);
+  background: var(--theme-switcher-bg);
+}
+
+.theme-option {
+  min-width: 4.5rem;
+  padding: 0.55rem 0.9rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.theme-option:hover {
+  color: var(--text-primary);
+}
+
+.theme-option.is-active {
+  color: var(--text-primary);
+  background: var(--theme-switcher-active-bg);
+  box-shadow: var(--theme-switcher-active-shadow);
+}
+
+.theme-switcher-mobile {
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-menu-button {
@@ -351,7 +559,7 @@ button {
 }
 
 .mobile-menu-top span:last-child {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-size: 0.82rem;
 }
 
@@ -390,6 +598,14 @@ button {
   .navigation-bar {
     width: calc(100% - 2rem);
     grid-template-columns: auto 1fr auto;
+  }
+
+  .theme-switcher {
+    display: none;
+  }
+
+  .theme-switcher-mobile {
+    display: inline-flex;
   }
 }
 

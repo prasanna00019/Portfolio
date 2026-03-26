@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Sparkles } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import "../assets/styles/Main.scss";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 
@@ -13,10 +13,6 @@ function Main() {
   return (
     <section className="section-shell hero-shell" id="home">
       <div className="hero-copy">
-        <span className="section-kicker">
-          <Sparkles size={16} />
-          Neon editorial build
-        </span>
         <h1 className="hero-title">
           Backend architecture,
           <span> MCP-native AI systems, and products built to go deep.</span>
@@ -71,20 +67,14 @@ function Main() {
 
       <div className="hero-card-column">
         <div className="hero-card-frame">
-          <div className="hero-card-caption">
-            <span>Live profile signal</span>
-            <p>Interactive card tuned to the new neon palette</p>
-          </div>
           <ProfileCard
             avatarUrl="https://avatars.githubusercontent.com/u/159623027?v=4"
             name="Prasanna H"
-            title="Backend Systems • AI Automation"
+            title="Backend Systems / AI Automation"
             handle="prasanna00019"
             status="Working on MCP, RAG, and agentic workflows"
             contactText="Contact"
             onContactClick={scrollToContact}
-            behindGradient="radial-gradient(circle at 20% 20%, rgba(0, 247, 255, 0.95) 0%, rgba(0, 247, 255, 0) 42%), radial-gradient(circle at 80% 18%, rgba(255, 84, 143, 0.88) 0%, rgba(255, 84, 143, 0) 40%), radial-gradient(circle at 50% 100%, rgba(186, 255, 60, 0.82) 0%, rgba(186, 255, 60, 0) 35%), conic-gradient(from 180deg at 50% 50%, #ff5f6d 0deg, #ffc371 50deg, #00f7ff 135deg, #8d5bff 240deg, #ff5f6d 360deg)"
-            innerGradient="linear-gradient(180deg, rgba(9, 16, 37, 0.22) 0%, rgba(5, 9, 24, 0.92) 100%)"
           />
         </div>
       </div>

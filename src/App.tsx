@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Main,
   Timeline,
@@ -11,11 +11,29 @@ import {
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
 import Iridescence from "./components/Iridescence/Iridescence";
+import { THEME_STORAGE_KEY, THEME_VISUALS, type ThemeName } from "./theme";
 
 function App() {
+  const [theme, setTheme] = useState<ThemeName>(() => {
+    if (typeof window === "undefined") {
+      return "neon";
+    }
+
+    const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+
+    return storedTheme === "ember" ? "ember" : "neon";
+  });
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  }, [theme]);
+
+  const themeVisuals = THEME_VISUALS[theme];
 
   return (
     <div className="main-container">
@@ -24,12 +42,12 @@ function App() {
       <div className="ambient-orb ambient-orb-three" />
       <div className="page-grid" />
       <Iridescence
-        color={[0.38, 0.86, 1]}
-        speed={0.55}
-        amplitude={0.08}
+        color={themeVisuals.iridescenceColor}
+        speed={themeVisuals.iridescenceSpeed}
+        amplitude={themeVisuals.iridescenceAmplitude}
         mouseReact={false}
       />
-      <Navigation />
+      <Navigation onThemeChange={setTheme} theme={theme} />
       <main className="page-content">
         <FadeIn
           transitionDuration={700}
