@@ -1,38 +1,103 @@
-.vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+.timeline-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 2rem;
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
+.timeline-copy {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
 }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+.timeline-list {
+  position: relative;
+  display: grid;
+  gap: 1.1rem;
 }
 
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(0, 247, 255, 0.4), rgba(255, 79, 155, 0.24));
 }
 
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 1rem;
+  align-items: start;
 }
 
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+.timeline-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.88), rgba(0, 247, 255, 0.4) 42%, rgba(0, 247, 255, 0.08) 70%);
+  box-shadow: 0 0 28px rgba(0, 247, 255, 0.25);
 }
 
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+.timeline-content {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
+    rgba(9, 14, 33, 0.7);
 }
 
-.svg-inline--fa {
-    color: white;
+.timeline-period {
+  color: var(--lime);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
 }
 
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
-    }
+.timeline-content h3,
+.timeline-content h4,
+.timeline-content p {
+  margin: 0;
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+}
+
+.timeline-content h4 {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.timeline-tag {
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 960px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
 }

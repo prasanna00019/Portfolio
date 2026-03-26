@@ -1,44 +1,96 @@
-.contact-container {
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+}
+
+.contact-copy {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.contact-panel {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(135deg, rgba(0, 247, 255, 0.08), rgba(255, 79, 155, 0.08)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.contact-panel span {
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+.contact-panel strong {
+  line-height: 1.6;
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.contact-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  background-color: #fdfdfd;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
+    rgba(9, 14, 33, 0.72);
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 
-.contact-box {
-  text-align: center;
-  padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+.contact-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
-.contact-box h1 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+.contact-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
 }
 
-.contact-box p {
-  margin-bottom: 1.5rem;
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(0, 247, 255, 0.16), rgba(255, 79, 155, 0.16)),
+    rgba(255, 255, 255, 0.06);
 }
 
-.contact-box ul {
-  list-style-type: none;
-  padding: 0;
+.contact-label,
+.contact-value {
+  display: block;
 }
 
-.contact-box li {
-  margin: 0.5rem 0;
+.contact-label {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
 }
 
-.contact-box a {
-  text-decoration: none;
-  color: #0077b6;
-  font-weight: 500;
+.contact-value {
+  color: var(--text-tertiary);
+  font-size: 0.92rem;
 }
 
-.contact-box a:hover {
-  text-decoration: underline;
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }

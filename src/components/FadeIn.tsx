@@ -1,4 +1,5 @@
 import React, {
+    ElementType,
     JSXElementConstructor,
     PropsWithChildren,
     useEffect,
@@ -8,8 +9,8 @@ import React, {
   interface Props {
     delay?: number;
     transitionDuration?: number;
-    wrapperTag?: JSXElementConstructor<any>;
-    childTag?: JSXElementConstructor<any>;
+    wrapperTag?: JSXElementConstructor<any> | ElementType;
+    childTag?: JSXElementConstructor<any> | ElementType;
     className?: string;
     childClassName?: string;
     visible?: boolean;
