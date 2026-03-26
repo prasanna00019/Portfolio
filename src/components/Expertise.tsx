@@ -70,7 +70,7 @@ function Expertise() {
             eyebrow: "Current exploration",
             title: "Going deeper into AI automation and the architecture of language models",
             description:
-                "Right now I&apos;m actively working on AI automation while studying LLM architecture more deeply, so I can understand not just how to use these systems, but how they are structured underneath.",
+                "Right now I am actively working on AI automation while studying LLM architecture more deeply, so I can understand not just how to use these systems, but how they are structured underneath.",
             labels: labelsSystems,
         },
     ];

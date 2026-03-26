@@ -49,15 +49,20 @@
   background: var(--project-media-bg);
 }
 
+.project-media-has-image {
+  aspect-ratio: auto;
+}
+
 .zoom {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
   transition: transform 260ms ease;
 }
 
 .project:hover .zoom {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .project-placeholder {

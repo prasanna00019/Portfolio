@@ -50,14 +50,10 @@ function Contact() {
           <span className="section-kicker">Contact</span>
           <h2 className="section-title">If the product needs brains and visual attitude, I&apos;m in.</h2>
           <p className="section-intro">
-            Reach out for backend-heavy builds, AI features, polished portfolio work,
-            or collaborative experiments that need both engineering depth and a stronger
-            design point of view.
+            Reach out for backend-heavy builds, AI features,
+            or collaborative experiments that need engineering depth.
           </p>
-          <div className="contact-panel">
-            <span>Best fit</span>
-            <strong>Product engineering, AI workflows, and distinctive frontend refreshes.</strong>
-          </div>
+       
         </div>
 
         <div className="contact-list">

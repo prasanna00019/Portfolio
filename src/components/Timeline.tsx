@@ -13,10 +13,10 @@ const experiences = [
   {
     period: "May 2025 - Present",
     company: "Hausvalley.com",
-    role: "Backend & AI Engineering Intern",
+    role: "Backend Intern",
     summary:
-      "Working on backend development, chatbot development, API workflows, and user-centered product improvements.",
-    tags: ["Backend Development", "Chatbot Development", "API Development", "User Experience"],
+      "Worked on backend development, API workflows, and user-centered product improvements.",
+    tags: ["Backend Development", "API Development", "User Experience"],
   },
   {
     period: "Dec 2024 - Jan 2025",

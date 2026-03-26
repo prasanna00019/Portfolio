@@ -1,7 +1,7 @@
 :root,
 :root[data-theme="neon"] {
   --font-ui: "Space Grotesk", sans-serif;
-  --font-copy: "Manrope", sans-serif;
+  --font-copy: "Instrument Sans", sans-serif;
   --font-display: "Syne", sans-serif;
   --accent-1-rgb: 105 247 255;
   --accent-2-rgb: 255 114 183;
@@ -342,8 +342,11 @@ button {
   margin: 0;
   color: var(--text-secondary);
   font-family: var(--font-copy);
-  font-size: 1.02rem;
-  line-height: 1.7;
+  font-size: 1.04rem;
+  font-weight: 450;
+  line-height: 1.74;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
 }
 
 .hero-description,
@@ -354,7 +357,10 @@ button {
 .contact-value,
 .footer-copy p {
   font-family: var(--font-copy);
-  letter-spacing: -0.01em;
+  font-weight: 450;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  color: var(--text-primary);
 }
 
 .button-primary,
@@ -437,6 +443,7 @@ button {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 16px;
+  color: var(--text-primary);
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: var(--brand-chip-bg);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);

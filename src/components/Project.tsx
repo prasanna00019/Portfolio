@@ -2,9 +2,11 @@ import k from "../assets/images/fit-nest.png";
 import crypto from "../assets/images/crypto.png";
 import finetuning from "../assets/images/fine-tuning.png";
 import rag from "../assets/images/rag.png";
-import aiAgents from "../assets/images/ai-agents.png";
+import postgres from "../assets/images/postgresmcp.png";
 import moodmaps from "../assets/images/moodmaps.png";
 import "../assets/styles/Project.scss";
+import optimization from "../assets/images/optimization.png";
+import monk3d from "../assets/images/monk3d.png";
 
 interface ProjectItem {
   title: string;
@@ -21,7 +23,7 @@ const aiProjects: ProjectItem[] = [
     title: "IDE Memory MCP",
     kind: "Cross-IDE memory layer",
     href: "https://github.com/prasanna00019/MCP-ToolHub/tree/main/IDE-Memory-MCP",
-    placeholder: "Add project image",
+    image : "https://github.com/prasanna00019/MCP-ToolHub/raw/main/IDE-Memory-MCP/logo.png",
     description:
       "A persistent memory layer for AI coding agents that keeps project context available across IDEs with section-based storage, smart warnings, and context-optimized reads.",
     tags: ["MCP", "AI Agents", "Developer Tools"],
@@ -30,7 +32,7 @@ const aiProjects: ProjectItem[] = [
     title: "PostgreSQL MCP",
     kind: "Database intelligence server",
     href: "https://github.com/prasanna00019/MCP-ToolHub/tree/main/PostgreSQL-MCP",
-    placeholder: "Add project image",
+    image: postgres,
     description:
       "An MCP server that combines schema analysis, AI-assisted explanation, CRUD operations, transactions, monitoring, and diagram generation for PostgreSQL databases.",
     tags: ["PostgreSQL", "MCP", "Automation"],
@@ -39,7 +41,7 @@ const aiProjects: ProjectItem[] = [
     title: "ContentPilot",
     kind: "Agentic content platform",
     href: "https://github.com/prasanna00019/AI-Agents-Hub/tree/main/ContentGeneration",
-    placeholder: "Add project image",
+    image : "https://github.com/prasanna00019/AI-Agents-Hub/raw/main/ContentGeneration/img3.PNG",
     description:
       "A local-first multi-agent platform for planning, researching, generating, formatting, and reviewing social content with LangGraph, advanced RAG, and memory-aware channel workflows.",
     tags: ["LangGraph", "RAG", "Agentic AI"],
@@ -48,19 +50,10 @@ const aiProjects: ProjectItem[] = [
     title: "Video2Notes Agent",
     kind: "Video intelligence workflow",
     href: "https://github.com/prasanna00019/AI-Agents-Hub/tree/main/Video2Notes_Agent",
-    placeholder: "Add project image",
+    image : "https://github.com/prasanna00019/AI-Agents-Hub/raw/main/Video2Notes_Agent/images/home_page_2.PNG",
     description:
       "A privacy-friendly system that turns long videos, uploads, and playlist items into structured notes, searchable knowledge, optional study assets, and RAG-enabled follow-up chat.",
     tags: ["Whisper", "RAG", "Notes"],
-  },
-  {
-    title: "AI Agents Hub",
-    kind: "Agent collection",
-    href: "https://github.com/prasanna00019/AI-Agents-Hub",
-    image: aiAgents,
-    description:
-      "A repository of agentic systems and experiments exploring tools, memory, orchestration, and practical reasoning workflows with LLM-based systems.",
-    tags: ["Agents", "Tools", "Memory"],
   },
   {
     title: "RAG Playground",
@@ -134,7 +127,7 @@ const hackathonProjects: ProjectItem[] = [
     href: "https://github.com/prasanna00019/HackGenesis-25",
     image: moodmaps,
     description:
-      "A project exploring how yoga, meditation, and spirituality can support inner calm, self-discovery, and emotional wellbeing.",
+      "A hackathon project exploring how yoga, meditation, and spirituality can support inner calm, self-discovery, and emotional wellbeing.",
     tags: ["Hackathon", "Wellness", "Storytelling"],
   },
 ];
@@ -147,8 +140,17 @@ const internshipProjects: ProjectItem[] = [
     image: k,
     description:
       "A gym operations and engagement platform with admin workflows, trainer discovery, revenue features, and member-facing services.",
-    tags: ["Operations", "Portal", "Deployment"],
+    tags: ["Backend Development", "API Design"] ,
   },
+  {
+    title: "MONK 3D",
+    kind: "Internship project",
+    href: "",
+    image: monk3d,
+    description:
+      "Worked on the backend of a 3D printing website, focusing on API development, and integration with frontend",
+    tags: ["Backend Development"],
+  }
 ];
 
 const researchProjects: ProjectItem[] = [
@@ -156,7 +158,7 @@ const researchProjects: ProjectItem[] = [
     title: "Optimization Methods",
     kind: "Engineering algorithms",
     href: "https://github.com/prasanna00019/Optimization-Methods",
-    placeholder: "Add project image",
+    image : optimization,
     description:
       "A collection of optimization algorithms implemented in Python for engineering applications, covering linear, nonlinear, constrained, gradient-based, and population-based methods.",
     tags: ["Python", "Optimization", "Engineering"],
@@ -180,11 +182,6 @@ function Project() {
         <h2 className="section-title">
           Categorized around the work I actually do most: backend, AI, and real systems.
         </h2>
-        <p className="section-intro">
-          These projects are grouped by problem space so it&apos;s easier to scan the
-          AI work, full-stack builds, crypto foundations, hackathon output, and
-          internship delivery separately.
-        </p>
       </div>
 
       <div className="project-groups">
@@ -202,7 +199,9 @@ function Project() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="project-media">
+                  <div
+                    className={`project-media${project.image ? " project-media-has-image" : ""}`}
+                  >
                     {project.image ? (
                       <img src={project.image} className="zoom" alt={project.title} />
                     ) : (
